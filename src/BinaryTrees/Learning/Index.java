@@ -39,6 +39,8 @@ public class Index {
 //        tree.printPostOrder(tree.root);
 //
 //        System.out.println(Math.max(BinaryTreeQ.getTheMaximumHeightOfBinaryTree(tree.root.left), BinaryTreeQ.getTheMaximumHeightOfBinaryTree(tree.root.right)));
-        System.out.println(BinaryTreeQ.sameBinaryTree(tree.root, tree1.root));
+        tree1.levelOrderTraversal(tree1.root);
+//        System.out.println(BinaryTreeQ.sameBinaryTree(tree.root, tree1.root));
+//        System.out.println(BinaryTreeQ.cousinsOfBinaryTreeOne.isCousins(tree1.root,1,2));
     }
 }

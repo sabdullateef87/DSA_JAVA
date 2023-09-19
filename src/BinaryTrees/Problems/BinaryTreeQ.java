@@ -56,5 +56,9 @@ public class BinaryTreeQ {
 
     }
 
+    public static class cousinsOfBinaryTreeTwo{
+
+    }
+
 
 }
