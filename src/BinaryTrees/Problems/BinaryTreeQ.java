@@ -15,9 +15,13 @@ public class BinaryTreeQ {
 
     }
 
-    public static boolean sameBinaryTree(TreeNode tree1, TreeNode tree2){
-        if (tree1 == null || tree2 == null){
-            return false;
+    public static boolean sameBinaryTree(Node tree1, Node tree2){
+        if(tree1 == null && tree2 == null) return true;
+        if (tree1 == null || tree2 == null) return false;
+
+        if(tree1.value == tree2.value){
+            return sameBinaryTree(tree1.right, tree2.right) && sameBinaryTree(tree1.left, tree2.left);
         }
+        return false;
     }
 }

@@ -11,7 +11,6 @@ public class BinaryTree {
     }
 
     public void printInorder(Node node){
-
         List<Integer> out = new ArrayList<>();
         if(node == null){
             return;
@@ -30,7 +29,6 @@ public class BinaryTree {
         printPreOrder(node.left);
         printPreOrder(node.right);
     }
-
     public void printPostOrder(Node node){
         if(node == null){
             return;
