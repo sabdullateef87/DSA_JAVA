@@ -4,6 +4,9 @@ import BinaryTrees.Learning.BinaryTree;
 import BinaryTrees.Learning.Node;
 import BinaryTrees.Learning.TreeNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinaryTreeQ {
     public static int getTheMaximumHeightOfBinaryTree(Node root){
         if(root == null){
@@ -24,4 +27,34 @@ public class BinaryTreeQ {
         }
         return false;
     }
+
+    public static class cousinsOfBinaryTreeOne{
+        static Node xParent;
+        static Node yParent;
+        static int xDepth = -1, yDepth = -1;
+        public static boolean isCousins(Node root, int x, int y){
+            retrieveParent(root, null, x, y, 0);
+            return xParent != yParent && xDepth == yDepth;
+
+        }
+
+        public static void retrieveParent(Node node, Node parent, int x, int y, int depth){
+            if(node == null){
+                return;
+            }
+            if(node.value == x){
+                xParent = parent;
+                xDepth = depth;
+            }else if(node.value == y){
+                yParent = parent;
+                yDepth = depth;
+            }
+
+            retrieveParent(node.left, node, x, y, depth + 1);
+            retrieveParent(node.right, node, x, y, depth + 1);
+        }
+
+    }
+
+
 }
